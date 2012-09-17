@@ -4,13 +4,17 @@
 #
 ############################################################
 
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BASHRC_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+SCRIPT_DIR=${BASHRC_DIR}/../scripts
+
+# add executable scripts to user path
+export PATH=${SCRIPT_DIR}:${PATH}
 
 # general ROS stuff
-source ${SCRIPT_DIR}/ros.sh
+source ${BASHRC_DIR}/ros.sh
 
 # workspace management stuff
-source ${SCRIPT_DIR}/ws.sh
+source ${BASHRC_DIR}/ws.sh
 
 # PR2 specific stuff
-source ${SCRIPT_DIR}/pr2.sh
+source ${BASHRC_DIR}/pr2.sh
