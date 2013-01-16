@@ -7,6 +7,7 @@
 alias tfmon="rosrun tf tf_monitor"
 alias imview="rosrun rqt_image_view rqt_image_view"
 alias reconf="rosrun rqt_reconfigure rqt_reconfigure"
+alias radd="export ROS_PACKAGE_PATH=$PWD:$ROS_PACKAGE_PATH"
 
 function fuerte()
 {
@@ -22,5 +23,10 @@ function groovy()
 function d()
 {
     rosrun pr2_dashboard pr2_dashboard
+}
+
+function addvcs()
+{
+    ln -s $HOME/vcs/$1 $1
 }
 
